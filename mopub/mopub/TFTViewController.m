@@ -9,7 +9,7 @@
 @implementation TFTViewController
 
 - (void)viewDidLoad {
-    self.adView = [[MPAdView alloc] initWithAdUnitId:@"5cf5b575d41d4196a56ff861373fea98" size:MOPUB_BANNER_SIZE];
+    self.adView = [[MPAdView alloc] initWithAdUnitId:@"BANN_AD_ID" size:MOPUB_BANNER_SIZE];
     self.adView.delegate = self;
     CGRect frame = self.adView.frame;
     CGSize size = [self.adView adContentViewSize];
@@ -18,7 +18,7 @@
     [self.view addSubview:self.adView];
     [self.adView loadAd];    
     
-    self.interstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:@"61eee50af640402cb5454145cff681d2"];
+    self.interstitial = [MPInterstitialAdController interstitialAdControllerForAdUnitId:@"INTERSTITIAL_AD_ID"];
     self.interstitial.delegate = self;
     [self.interstitial loadAd];
     
