@@ -15,8 +15,8 @@
 }
 
 -(void) dealloc {
-    self.banner.delegate = nil;
-    self.banner = nil;
+    [banner release];
+    banner = nil;
 }
 
 -(void) requestAdWithSize:(CGSize)size customEventInfo:(NSDictionary *)info {
