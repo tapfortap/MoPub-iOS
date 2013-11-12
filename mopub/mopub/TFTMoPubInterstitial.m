@@ -15,7 +15,8 @@
 }
 
 - (void) dealloc {
-    self.interstitial = nil;
+    [interstitial release];
+    interstitial = nil;
 }
 
 - (void)requestInterstitialWithCustomEventInfo:(NSDictionary *)info
